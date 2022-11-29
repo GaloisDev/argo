@@ -50,6 +50,7 @@ jobs:
         poetry cache clear --all pypi
         poetry cache clear --all private
         poetry config experimental.new-installer false
+        pip install cmake
         poetry install
     - name: Typecheck python code
       working-directory: ./python
