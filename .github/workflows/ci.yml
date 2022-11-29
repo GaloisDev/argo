@@ -8,13 +8,13 @@ on:
 
 jobs:
   build-linux:
-    runs-on: ubuntu-20.04 # Testing
+    runs-on: ubuntu-22.04 # Testing
     strategy:
       matrix:
         ghc-ver: ["8.6.5", "8.8.4", "8.10.7", "9.0.2", "9.2.1"]
       # complete all jobs
       fail-fast: false
-    name: Argo - GHC v${{ matrix.ghc-ver }} - ubuntu-20.04
+    name: Argo - GHC v${{ matrix.ghc-ver }} - ubuntu-22.04
     steps:
     - uses: actions/setup-python@v2
       with:
