@@ -47,10 +47,8 @@ jobs:
       working-directory: ./python
       # see https://github.com/python-poetry/poetry/issues/4210 for new-installer workaround details below
       run: |
-        poetry cache clear --all pypi
-        poetry cache clear --all private
         poetry config experimental.new-installer false
-        pip install cmake
+        pip install wheel
         poetry install
     - name: Typecheck python code
       working-directory: ./python
